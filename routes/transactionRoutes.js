@@ -5,7 +5,7 @@ import decodeToken from "../utils/decodeDataFromToken.js";
 export const router = express.Router();
 
 router.get("/getAll", async (req, res) => {
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZjZWZhNDY0NjdiMTQ1MzVhYWVkOTciLCJpYXQiOjE2OTQzMDQzODMsImV4cCI6MTY5Njg5NjM4M30.LlOdmDgmsldHjxpRMbLCqZLnTSMO4cKOG1QE97qKGJo";
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZkNzYxNmUyYWY2OGYwYWE5ZDBhNTkiLCJpYXQiOjE2OTQzMzQ3NzcsImV4cCI6MTY5NjkyNjc3N30.BLS5ZVwRVcqfZ05euKKXwbG-aybR12MdIvVh_OtfKaU";
     // token = req.cookies.jwt;
     if (token) {
         const { idno } = await decodeToken(token);
@@ -27,7 +27,7 @@ router.get("/getAll", async (req, res) => {
 
 // for testing and filling database
 router.post("/addTransaction", async (req, res) => {
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZjZWZhNDY0NjdiMTQ1MzVhYWVkOTciLCJpYXQiOjE2OTQzMDQzODMsImV4cCI6MTY5Njg5NjM4M30.LlOdmDgmsldHjxpRMbLCqZLnTSMO4cKOG1QE97qKGJo";
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGZkNzUzZWUyYWY2OGYwYWE5ZDBhNTMiLCJpYXQiOjE2OTQzMzI4NjUsImV4cCI6MTY5NjkyNDg2NX0.FgREMSxXXoIewmbIb5FUPsvjn95EdZm2ysXcbw4A4xs";
     // token = req.cookies.jwt;
 
     const { fromAccount, toIDNO, amount, currency, destination } = req.body;
